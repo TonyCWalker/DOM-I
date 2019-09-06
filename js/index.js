@@ -94,3 +94,8 @@ contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contac
 contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address'];
 contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone'];
 contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email'];
+
+
+// Footer 
+let footer = document.querySelector('footer');
+footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright'];
