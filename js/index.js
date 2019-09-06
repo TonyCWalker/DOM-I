@@ -56,3 +56,8 @@ navLinks.forEach(function (item){
   item.textContent = siteContent['nav']['nav-item-' + counter];
   counter++;
 });
+
+// CTA
+let ctaContent = document.getElementsByClassName('cta-text')[0];
+ctaContent.getElementsByTagName('h1')[0].innerHTML = siteContent['cta']['h1'];
+ctaContent.getElementsByTagName('button')[0].innerHTML = siteContent['cta']['button'];
