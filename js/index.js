@@ -87,3 +87,10 @@ textList[3].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']
 textList[4].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['vision-h4'];
 textList[4].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['vision-content'];
 
+
+// Contact
+let contact = document.getElementsByClassName('contact')[0];
+contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4'];
+contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address'];
+contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone'];
+contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email'];
