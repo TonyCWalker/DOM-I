@@ -117,5 +117,5 @@ let createNewItem = (item) => {
   return newItem;
 }
 
-NavLinks.prepend(createNewItem('Sign up'));
-NavLinks.append(createNewItem('Sign in'));
+NavLinks.prepend(createNewItem('Home'));
+NavLinks.append(createNewItem('News'));
