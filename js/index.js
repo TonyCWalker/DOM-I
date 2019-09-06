@@ -99,3 +99,11 @@ contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email']
 // Footer 
 let footer = document.querySelector('footer');
 footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright'];
+
+
+// New Content
+
+// Green navLinks
+navLinks.forEach((item) => {
+  item.style.color = 'green';
+});
