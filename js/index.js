@@ -48,3 +48,11 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Nav Links
+let navLinks = document.querySelectorAll('nav a');
+counter = 1;
+navLinks.forEach(function (item){
+  item.textContent = siteContent['nav']['nav-item-' + counter];
+  counter++;
+});
