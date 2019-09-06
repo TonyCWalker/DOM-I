@@ -107,3 +107,15 @@ footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright
 navLinks.forEach((item) => {
   item.style.color = 'green';
 });
+
+// New Navigation Links
+NavLinks = document.getElementsByTagName('nav')[0]; 
+let createNewItem = (item) => {
+  let newItem = document.createElement('a');
+  newItem.innerHTML = item;
+  newItem.style.color ='green';
+  return newItem;
+}
+
+NavLinks.prepend(createNewItem('Sign up'));
+NavLinks.append(createNewItem('Sign in'));
