@@ -37,6 +37,85 @@ const siteContent = {
   },
 };
 
+// Images
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+// Nav Links
+let navLinks = document.querySelectorAll('nav a');
+counter = 1;
+navLinks.forEach(function (item){
+  item.textContent = siteContent['nav']['nav-item-' + counter];
+  counter++;
+});
+
+
+// CTA
+let ctaContent = document.getElementsByClassName('cta-text')[0];
+ctaContent.getElementsByTagName('h1')[0].innerHTML = siteContent['cta']['h1'];
+ctaContent.getElementsByTagName('button')[0].innerHTML = siteContent['cta']['button'];
+
+
+// Main Content
+let textList = document.querySelectorAll('.text-content');
+
+// Features
+textList[0].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['features-h4'];
+textList[0].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['features-content'];
+
+// About
+textList[1].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['about-h4'];
+textList[1].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['about-content'];
+
+// Services 
+textList[2].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['services-h4'];
+textList[2].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['services-content'];
+
+// Product
+textList[3].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['product-h4'];
+textList[3].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['product-content'];
+
+// Vision
+textList[4].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['vision-h4'];
+textList[4].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['vision-content'];
+
+
+// Contact
+let contact = document.getElementsByClassName('contact')[0];
+contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4'];
+contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address'];
+contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone'];
+contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email'];
+
+
+// Footer 
+let footer = document.querySelector('footer');
+footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright'];
+
+
+// New Content
+
+// Green navLinks
+navLinks.forEach((item) => {
+  item.style.color = 'green';
+});
+
+// New Navigation Links
+NavLinks = document.getElementsByTagName('nav')[0]; 
+let createNewItem = (item) => {
+  let newItem = document.createElement('a');
+  newItem.innerHTML = item;
+  newItem.style.color ='green';
+  return newItem;
+}
+
+NavLinks.prepend(createNewItem('Home'));
+NavLinks.append(createNewItem('News'));
